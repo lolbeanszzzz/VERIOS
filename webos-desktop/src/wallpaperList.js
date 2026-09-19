@@ -1,4 +1,7 @@
+export const DEFAULT_VERI_WALLPAPER = "/wallpapers/minecraft-sunset.mp4";
+
 export const videos = [
+  DEFAULT_VERI_WALLPAPER,
   "https://motionbgs.com/media/8008/above-the-stormworld.1920x1080.mp4",
   "https://motionbgs.com/media/9295/st-michaels-mount.1920x1080.mp4",
   "https://motionbgs.com/media/8778/heart-of-the-singularity.1920x1080.mp4",

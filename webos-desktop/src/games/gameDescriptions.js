@@ -414,7 +414,7 @@ export const descriptionMap = {
   newsApp: "Catch up on what's new with changelogs, features, and recent updates at a glance.",
   explorer: "Browse, organize, and manage your virtual files with familiar folder navigation.",
   notepad: "Jot down notes, draft ideas, or edit plain text without any fuss.",
-  browserApp: "Surf the web from inside your virtual desktop with the built-in Yuki Browser.",
+  browserApp: "Surf the web from inside your virtual desktop with the built-in VERI Browser.",
   yukiDevTools: "Yuki Dev Tools loads IT Tools in a themed iframe and keeps it synced with YukiOS CSS variables.",
   terminal: "Fire up the command line for scripts, system commands, and developer tools.",
   music: "Stream and play audio while you work, browse, or relax on the desktop.",

@@ -1528,9 +1528,9 @@ export const APP_MANIFESTS = [
     windowIdPatterns: ["movies"],
     category: "media",
     persistContentState: false,
-    clippy: { message: "Stream movies and shows on Aether.", animation: ClippyAnimation.Show },
-    description: "Stream movies and TV shows instantly via Aether.",
-    targetUrl: "https://aether.ist/",
+    clippy: { message: "Open Movies and explore the latest entertainment.", animation: ClippyAnimation.Show },
+    description: "Launches Verilabs Movies inside a dedicated app window.",
+    targetUrl: "https://verilabs.biz",
     windowSize: ["90vw", "85vh"]
   },
   {
