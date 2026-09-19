@@ -40,7 +40,7 @@ export const MODE_DEFS = {
     cssClass: "steamdeck-mode",
     cssTarget: "html",
     storageKey: StorageKeys.steamDeckMode,
-    label: "Yuki Steam Client"
+    label: "VERI Steam Client"
   }
 };
 

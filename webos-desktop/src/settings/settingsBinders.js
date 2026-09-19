@@ -1,4 +1,5 @@
 import { StorageKeys, os } from "../framework.js";
+import { SystemUtilities } from "../system.js";
 import { Achievements } from "../achievements.js";
 import { modeManager, MODES } from "../modeManager.js";
 import { bus, BusEvents } from "../core/EventBus.js";
@@ -1044,9 +1045,42 @@ export function bindAppearanceCategory(
 
   const openBtn = $("#settingsOpenWallpaperEngine", win);
   if (openBtn) {
-    bindEvent(openBtn, "click", () => {
-      os.app.launch("wallpaperEngineApp");
-    });
+  bindEvent(openBtn, "click", () => {
+  os.app.launch("wallpaperEngineApp");
+  });
+  }
+
+  const uploadWallpaperBtn = $("#settingsUploadWallpaper", win);
+  if (uploadWallpaperBtn) {
+  bindEvent(uploadWallpaperBtn, "click", () => {
+  const input = createElement("input", {
+  attributes: { type: "file", accept: "image/*,video/*" },
+  styles: { display: "none" }
+  });
+  document.body.appendChild(input);
+  bindEvent(input, "change", async () => {
+  const file = input.files?.[0];
+  input.remove();
+  if (!file) return;
+  if (file.size > 25 * 1024 * 1024) {
+  os.dialog.alert("Wallpaper upload", "Keep wallpaper files under 25MB.");
+  return;
+  }
+  try {
+  const dataUrl = await new Promise((resolve, reject) => {
+  const reader = new FileReader();
+  reader.onload = () => resolve(String(reader.result || ""));
+  reader.onerror = reject;
+  reader.readAsDataURL(file);
+  });
+  await SystemUtilities.setWallpaper(dataUrl);
+  os.notify.send("Wallpaper updated", `${file.name} is now your VERI OS wallpaper.`, { type: "success" });
+  } catch {
+  os.dialog.alert("Wallpaper upload", "Could not use that wallpaper file.");
+  }
+  });
+  input.click();
+  });
   }
 
   mountWallpaperEngine(win);
