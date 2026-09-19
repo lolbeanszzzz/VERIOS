@@ -1144,7 +1144,7 @@ export class SteamDeckLayout {
           </div>
         </div>
         <div class="deck-overview-subbar">
-          <div class="deck-overview-cloud"><i class="fas fa-cloud"></i><span>Yuki Steam Cloud: Up To Date</span></div>
+          <div class="deck-overview-cloud"><i class="fas fa-cloud"></i><span>VERI Steam Cloud: Up To Date</span></div>
           <div class="deck-overview-tabs">${this.buildOverviewTabs(tab)}</div>
         </div>
         <div class="deck-overview-content" id="deck-overview-content"></div>

@@ -1070,9 +1070,12 @@ export function renderAppearanceSettings(s) {
       <div id="sc-wallpaper" class="settings-card" style="margin-top: 16px;">
         <div class="settings-card-header">
           <i class="fas fa-images"></i> Wallpaper
-          <button class="settings-btn" id="settingsOpenWallpaperEngine" style="margin-left: auto;">
-            <i class="fas fa-external-link-alt"></i> Open in window
-          </button>
+<div style="margin-left:auto;display:flex;gap:8px;">
+  <button class="settings-btn" id="settingsUploadWallpaper"><i class="fas fa-upload"></i> Upload wallpaper</button>
+  <button class="settings-btn" id="settingsOpenWallpaperEngine">
+  <i class="fas fa-external-link-alt"></i> Open in window
+  </button>
+  </div>
         </div>
         <div class="settings-row">
           <div class="settings-label-group">

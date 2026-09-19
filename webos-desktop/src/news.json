@@ -1,5 +1,32 @@
 [
   {
+    "date": "September 19, 2026",
+    "label": "VERI OS Branding",
+    "sections": [
+      {
+        "icon": "fa-tag",
+        "title": "System Identity",
+        "items": [["fa-tag", "VERI OS naming", "Updated system, browser, Steam, guide, and intro labels."]]
+      },
+      {
+        "icon": "fa-images",
+        "title": "Wallpaper Uploads",
+        "items": [["fa-upload", "Custom wallpapers", "Upload image or video wallpapers directly from Settings."]]
+      }
+    ]
+  },
+  {
+    "date": "September 19, 2026",
+    "label": "VERI OS Interface",
+    "sections": [
+      {
+        "icon": "fa-layer-group",
+        "title": "Desktop Refresh",
+        "items": [["fa-layer-group", "New VERI OS Dock", "Launch your favorite applications from a focused glass dock."]]
+      }
+    ]
+  },
+  {
     "date": "September 13, 2026",
     "label": "Papirus Icons",
     "sections": [
