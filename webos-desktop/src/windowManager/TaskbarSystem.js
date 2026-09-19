@@ -576,15 +576,36 @@ export class TaskbarSystem {
         {
           winId: "explorer-pinned",
           appId: "explorerApp",
-          title: "Explorer",
+          title: "Files",
           iconValue: resolveIconUrl("static/icons/file.webp"),
           color: null
         },
         {
           winId: "browser-pinned",
           appId: "browserApp",
-          title: "Yuki Browser",
+          title: "Browser",
           iconValue: resolveIconUrl("static/icons/firefox.webp"),
+          color: null
+        },
+        {
+          winId: "notepad-pinned",
+          appId: "notepadApp",
+          title: "Notepad",
+          iconValue: resolveIconUrl("static/icons/notepad.webp"),
+          color: null
+        },
+        {
+          winId: "room-pinned",
+          appId: "room3dApp",
+          title: "3D Room",
+          iconValue: resolveIconUrl("static/icons/3dyukios.webp"),
+          color: null
+        },
+        {
+          winId: "assistant-pinned",
+          appId: "aiAssistantApp",
+          title: "VERI Assistant",
+          iconValue: "papirus:apps/gnome-robots",
           color: null
         },
         {
@@ -592,27 +613,6 @@ export class TaskbarSystem {
           appId: "discordApp",
           title: "Discord",
           iconValue: "papirus:apps/discord",
-          color: null
-        },
-        {
-          winId: "movies-pinned",
-          appId: "moviesApp",
-          title: "Movies",
-          iconValue: "papirus:mimetypes/video-x-generic",
-          color: null
-        },
-        {
-          winId: "aniwatch-pinned",
-          appId: "aniwatchApp",
-          title: "Aniwatch Anime",
-          iconValue: "papirus:actions/media-playback-start",
-          color: null
-        },
-        {
-          winId: "launchpad-pinned",
-          appId: "launchpadApp",
-          title: "Launchpad",
-          iconValue: "papirus:actions/view-grid",
           color: null
         }
       ];

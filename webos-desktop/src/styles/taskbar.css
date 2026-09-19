@@ -1,16 +1,45 @@
 #taskbar {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: var(--taskbar-h);
-  backdrop-filter: blur(var(--blur-xs));
+  bottom: 24px;
+  left: 50%;
+  right: auto;
+  width: min(760px, calc(100vw - 32px));
+  height: 82px;
+  transform: translateX(-50%);
+  backdrop-filter: blur(28px) saturate(1.15);
+  -webkit-backdrop-filter: blur(28px) saturate(1.15);
   display: flex;
   align-items: center;
-  padding: 0 8px;
+  padding: 10px 14px;
   z-index: 6000;
-  box-shadow: 0 -2px 8px var(--shadow-color);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  background: color-mix(in srgb, var(--bg-elev-1) 78%, transparent);
+  box-shadow: var(--shadow-depth), 0 0 0 1px var(--glass) inset;
   zoom: var(--taskbar-scale);
+}
+
+#taskbar::before {
+  content: "VERI OS";
+  position: fixed;
+  bottom: calc(100% + 14px);
+  left: 18px;
+  color: var(--text-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-shadow: 0 2px 12px var(--shadow-color);
+}
+
+#taskbar::after {
+  content: "12:05 PM   •   ONLINE";
+  position: fixed;
+  bottom: calc(100% + 14px);
+  right: 18px;
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
 }
 
 #taskbar.position-top {
@@ -435,6 +464,88 @@
   font-size: 12px;
   color: var(--text-primary);
   white-space: nowrap;
+}
+
+#taskbar.position-bottom {
+  bottom: 24px;
+  left: 50%;
+  right: auto;
+  width: min(760px, calc(100vw - 32px));
+  height: 82px;
+  transform: translateX(-50%);
+  padding: 10px 14px;
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  background: color-mix(in srgb, var(--bg-elev-1) 78%, transparent);
+  box-shadow: var(--shadow-depth), 0 0 0 1px var(--glass) inset;
+}
+
+#taskbar.position-bottom #start-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background-size: 38px;
+  background-color: var(--brand-dim);
+}
+
+#taskbar.position-bottom #taskbar-windows {
+  justify-content: center;
+  gap: 8px;
+  padding: 0 8px;
+}
+
+#taskbar.position-bottom .taskbar-item {
+  width: 58px;
+  height: 58px;
+  padding: 8px;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background: var(--glass-strong);
+}
+
+#taskbar.position-bottom .taskbar-item img,
+#taskbar.position-bottom .taskbar-item svg,
+#taskbar.position-bottom .taskbar-item i {
+  width: 36px;
+  height: 36px;
+  font-size: 30px;
+}
+
+#taskbar.position-bottom .taskbar-item:hover,
+#taskbar.position-bottom .taskbar-item.active {
+  transform: translateY(-7px);
+  border-color: color-mix(in srgb, var(--brand) 55%, transparent);
+  background: color-mix(in srgb, var(--brand) 28%, var(--glass-strong));
+  box-shadow: 0 10px 24px var(--brand-glow);
+}
+
+#taskbar.position-bottom .taskbar-item-label {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  #taskbar.position-bottom {
+    bottom: 12px;
+    width: calc(100vw - 20px);
+    height: 68px;
+    border-radius: 20px;
+  }
+
+  #taskbar.position-bottom .taskbar-item,
+  #taskbar.position-bottom #start-button {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+  }
+
+  #taskbar.position-bottom .taskbar-item img,
+  #taskbar.position-bottom .taskbar-item svg,
+  #taskbar.position-bottom .taskbar-item i {
+    width: 28px;
+    height: 28px;
+    font-size: 24px;
+  }
 }
 .taskbar-speaker-indicator img {
   width: 30px;
