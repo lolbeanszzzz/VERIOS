@@ -1,6 +1,22 @@
 [
   {
     "date": "September 19, 2026",
+    "label": "VERI OS Media",
+    "sections": [
+      {
+        "icon": "fa-film",
+        "title": "Movies App",
+        "items": [["fa-film", "Verilabs Movies", "Open Verilabs.biz inside a dedicated Movies app window."]]
+      },
+      {
+        "icon": "fa-video",
+        "title": "New Default Wallpaper",
+        "items": [["fa-video", "Minecraft Sunset", "VERI OS now opens with the Minecraft Sunset live wallpaper."]]
+      }
+    ]
+  },
+  {
+    "date": "September 19, 2026",
     "label": "VERI OS Branding",
     "sections": [
       {

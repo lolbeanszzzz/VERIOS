@@ -9,7 +9,7 @@ import { BusEvents } from "./core/EventBus.js";
 import { getVantaPresetById } from "./vantaPresets.js";
 import { vantaPresets } from "./vantaPresets.js";
 import { loadVantaEffect } from "./vanta/vantaLoader.js";
-import { videos, videos2 } from "./wallpaperList.js";
+import { DEFAULT_VERI_WALLPAPER, videos, videos2 } from "./wallpaperList.js";
 import { parseBool, isBlobLike } from "./utils/utils.js";
 import { isFunction } from "./shared/functionUtils.js";
 
@@ -223,9 +223,7 @@ class WallpaperManager {
   }
 
   static pickAnimatedWallpaper() {
-    const allVideos = [...videos, ...videos2];
-    if (!allVideos.length) return null;
-    return allVideos[Math.floor(Math.random() * allVideos.length)];
+    return DEFAULT_VERI_WALLPAPER;
   }
 
   static async setSequentialWallpaper() {
