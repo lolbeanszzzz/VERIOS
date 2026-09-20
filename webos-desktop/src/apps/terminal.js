@@ -3912,7 +3912,7 @@ export class TerminalApp extends BaseApp {
       "                     " + this.displayName + "@" + this.hostname,
       `        /\\           OS          ${osText}`,
       `       /  \\          KERNEL      ${engine}`,
-      `      /\\   \\         YukiOS      ${YUKIOS_VERSION}`,
+      `      /\\   \\         VERI OS     ${YUKIOS_VERSION}`,
       `     / > ω <\\        CPU Cores   ${coresText}`,
       `    /   __   \\       GPU         ${gpu}`,
       `   / __|  |__-\\      MEMOWY      ${ram}`,

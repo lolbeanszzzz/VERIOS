@@ -1107,7 +1107,7 @@ export class QuickAccessPanel {
       { icon: "fa-info-circle", label: "About YukiOS", app: "aboutApp" }
     ];
     const infoRows = [
-      { icon: "fa-tag", label: "Version", value: `YukiOS ${YUKIOS_VERSION}` },
+      { icon: "fa-tag", label: "Version", value: `VERI OS ${YUKIOS_VERSION}` },
       { icon: "fa-display", label: "Platform", value: navigator.platform },
       { icon: "fa-expand", label: "Display", value: `${window.innerWidth} × ${window.innerHeight}` }
     ];

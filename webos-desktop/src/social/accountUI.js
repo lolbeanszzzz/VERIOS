@@ -9,17 +9,17 @@ export function buildAccountStatusHtml() {
   const account = getAccountStatus();
   if (account) {
     return `
-      <div class="yukios-account-meta">Signed in as <strong>${escapeHtml(account.nickname)}</strong></div>
-      <div class="yukios-account-actions">
-        <button type="button" class="yukios-account-btn" data-account-action="signout"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/system-log-out.svg" class="papirus-icon papirus-icon--22" alt="" /> Sign Out</button>
+      <div class="veri-account-meta">Signed in as <strong>${escapeHtml(account.nickname)}</strong></div>
+      <div class="veri-account-actions">
+        <button type="button" class="veri-account-btn" data-account-action="signout"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/system-log-out.svg" class="papirus-icon papirus-icon--22" alt="" /> Sign Out</button>
       </div>
     `;
   }
   return `
-    <p class="yukios-account-note">Sign in or convert your local account to a cloud account to keep your profile, achievements and playtime across devices. No email needed.</p>
-    <div class="yukios-account-actions">
-      <button type="button" class="yukios-account-btn" data-account-action="signin"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/system-log-out.svg" class="papirus-icon papirus-icon--22" alt="" /> Sign In</button>
-      <button type="button" class="yukios-account-btn yukios-account-btn--primary" data-account-action="register"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/cloud-upload.svg" class="papirus-icon papirus-icon--22" alt="" /> Sync with Cloud</button>
+    <p class="veri-account-note">Sign in or convert your local account to a cloud account to keep your profile, achievements and playtime across devices. No email needed.</p>
+    <div class="veri-account-actions">
+      <button type="button" class="veri-account-btn" data-account-action="signin"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/system-log-out.svg" class="papirus-icon papirus-icon--22" alt="" /> Sign In</button>
+      <button type="button" class="veri-account-btn veri-account-btn--primary" data-account-action="register"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/cloud-upload.svg" class="papirus-icon papirus-icon--22" alt="" /> Sync with Cloud</button>
     </div>
   `;
 }
@@ -27,10 +27,10 @@ export function buildAccountStatusHtml() {
 export function buildAccountBlockHtml(startView, options = {}) {
   if (options.socialDisabled) {
     return `
-      <div class="yukios-account-body">
-        <p class="yukios-account-note"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/im-user-offline.svg" class="papirus-icon papirus-icon--22" alt="" /> Social features are disabled.</p>
-        <div class="yukios-account-actions">
-          <button type="button" class="yukios-account-btn" data-account-action="enable-social"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/object-select.svg" class="papirus-icon papirus-icon--22" alt="" /> Enable in Settings</button>
+      <div class="veri-account-body">
+        <p class="veri-account-note"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/im-user-offline.svg" class="papirus-icon papirus-icon--22" alt="" /> Social features are disabled.</p>
+        <div class="veri-account-actions">
+          <button type="button" class="veri-account-btn" data-account-action="enable-social"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/object-select.svg" class="papirus-icon papirus-icon--22" alt="" /> Enable in Settings</button>
         </div>
       </div>
     `;
@@ -40,47 +40,47 @@ export function buildAccountBlockHtml(startView, options = {}) {
   const registerHidden = start === "register" ? "" : " hidden";
   const nicknameValue = options.prefillNickname ? ` value="${escapeHtml(options.prefillNickname)}"` : "";
   const anonymousNote = options.anonymousNote
-    ? `<p class="yukios-account-note">${escapeHtml(options.anonymousNote)}</p>`
+    ? `<p class="veri-account-note">${escapeHtml(options.anonymousNote)}</p>`
     : "";
   const conversionNote = options.prefillNickname
-    ? '<p class="yukios-account-note">Creating an account turns your current local profile into a registered account. Your games, achievements and playtime stay linked.</p>'
+    ? '<p class="veri-account-note">Creating an account turns your current local profile into a registered account. Your games, achievements and playtime stay linked.</p>'
     : "";
   return `
-    <div class="yukios-account-body${start ? " hidden" : ""}">
+    <div class="veri-account-body${start ? " hidden" : ""}">
       ${buildAccountStatusHtml()}
       ${anonymousNote}
     </div>
-    <div class="yukios-account-form yukios-account-form--signin${signinHidden}">
-      <label class="yukios-account-label">Nickname</label>
-      <input type="text" class="yukios-account-input yukios-account-input--identifier" placeholder="Nickname" autocomplete="username" />
-      <label class="yukios-account-label">Password</label>
-      <input type="password" class="yukios-account-input yukios-account-input--signin-pass" placeholder="Password" autocomplete="current-password" />
-      <div class="yukios-account-error hidden"></div>
-      <div class="yukios-account-actions">
-        <button type="button" class="yukios-account-btn yukios-account-btn--primary" data-account-action="signin-submit"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/system-log-out.svg" class="papirus-icon papirus-icon--22" alt="" /> Sign In</button>
-        <button type="button" class="yukios-account-btn" data-account-action="switch-register"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/list-add.svg" class="papirus-icon papirus-icon--22" alt="" /> Sync with Cloud</button>
+    <div class="veri-account-form veri-account-form--signin${signinHidden}">
+      <label class="veri-account-label">Nickname</label>
+      <input type="text" class="veri-account-input veri-account-input--identifier" placeholder="Nickname" autocomplete="username" />
+      <label class="veri-account-label">Password</label>
+      <input type="password" class="veri-account-input veri-account-input--signin-pass" placeholder="Password" autocomplete="current-password" />
+      <div class="veri-account-error hidden"></div>
+      <div class="veri-account-actions">
+        <button type="button" class="veri-account-btn veri-account-btn--primary" data-account-action="signin-submit"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/system-log-out.svg" class="papirus-icon papirus-icon--22" alt="" /> Sign In</button>
+        <button type="button" class="veri-account-btn" data-account-action="switch-register"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/list-add.svg" class="papirus-icon papirus-icon--22" alt="" /> Sync with Cloud</button>
       </div>
     </div>
-    <div class="yukios-account-form yukios-account-form--register${registerHidden}">
+    <div class="veri-account-form veri-account-form--register${registerHidden}">
       ${conversionNote}
-      <label class="yukios-account-label">Nickname</label>
-      <input type="text" class="yukios-account-input yukios-account-input--nickname" maxlength="32" placeholder="Nickname (3+ characters)" autocomplete="nickname"${nicknameValue} />
-      <label class="yukios-account-label">Password</label>
-      <input type="password" class="yukios-account-input yukios-account-input--register-pass" placeholder="Password (6+ characters)" autocomplete="new-password" />
-      <div class="yukios-account-error hidden"></div>
-      <div class="yukios-account-actions">
-        <button type="button" class="yukios-account-btn yukios-account-btn--primary" data-account-action="register-submit"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/cloud-upload.svg" class="papirus-icon papirus-icon--22" alt="" /> Sync with Cloud</button>
-        <button type="button" class="yukios-account-btn" data-account-action="switch-login"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/system-log-out.svg" class="papirus-icon papirus-icon--22" alt="" /> Switch to Login</button>
+      <label class="veri-account-label">Nickname</label>
+      <input type="text" class="veri-account-input veri-account-input--nickname" maxlength="32" placeholder="Nickname (3+ characters)" autocomplete="nickname"${nicknameValue} />
+      <label class="veri-account-label">Password</label>
+      <input type="password" class="veri-account-input veri-account-input--register-pass" placeholder="Password (6+ characters)" autocomplete="new-password" />
+      <div class="veri-account-error hidden"></div>
+      <div class="veri-account-actions">
+        <button type="button" class="veri-account-btn veri-account-btn--primary" data-account-action="register-submit"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/cloud-upload.svg" class="papirus-icon papirus-icon--22" alt="" /> Sync with Cloud</button>
+        <button type="button" class="veri-account-btn" data-account-action="switch-login"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/system-log-out.svg" class="papirus-icon papirus-icon--22" alt="" /> Switch to Login</button>
       </div>
     </div>
   `;
 }
 
 export function bindAccountBlock(root, { onChange, onEnableSocial } = {}) {
-  const body = $(".yukios-account-body", root);
-  const signinForm = $(".yukios-account-form--signin", root);
-  const registerForm = $(".yukios-account-form--register", root);
-  const errorEls = $$(".yukios-account-error", root);
+  const body = $(".veri-account-body", root);
+  const signinForm = $(".veri-account-form--signin", root);
+  const registerForm = $(".veri-account-form--register", root);
+  const errorEls = $$(".veri-account-error", root);
 
   const setErrorsHidden = () => errorEls.forEach((el) => el.classList.add("hidden"));
 
@@ -137,8 +137,8 @@ export function bindAccountBlock(root, { onChange, onEnableSocial } = {}) {
     try {
       let result;
       if (action === "signin-submit") {
-        const identifier = $(".yukios-account-input--identifier", root);
-        const password = $(".yukios-account-input--signin-pass", root);
+        const identifier = $(".veri-account-input--identifier", root);
+        const password = $(".veri-account-input--signin-pass", root);
         const idValue = identifier ? identifier.value.trim() : "";
         const passValue = password ? password.value : "";
         if (!idValue || !passValue) {
@@ -147,8 +147,8 @@ export function bindAccountBlock(root, { onChange, onEnableSocial } = {}) {
         }
         result = await loginWithAccount(idValue, passValue);
       } else {
-        const nickname = $(".yukios-account-input--nickname", root);
-        const password = $(".yukios-account-input--register-pass", root);
+        const nickname = $(".veri-account-input--nickname", root);
+        const password = $(".veri-account-input--register-pass", root);
         const nickValue = nickname ? nickname.value.trim() : "";
         const passValue = password ? password.value : "";
         if (nickValue.length < 3 || nickValue.length > 32) {
