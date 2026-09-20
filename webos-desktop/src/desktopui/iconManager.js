@@ -26,9 +26,10 @@ const HARDCODED_DESKTOP_ICONS = [
   { app: "browserApp", name: "Browser", icon: resolveIconUrl("static/icons/firefox.webp") },
   { app: "notepadApp", name: "Notepad", icon: "static/icons/notepad.webp" },
   { app: "room3dApp", name: "3D Room", icon: "static/icons/3dyukios.webp" },
+  { app: "moviesApp", name: "Movies", icon: "papirus:mimetypes/video-x-generic" },
   { app: "craxgptApp", name: "CraxGPT", icon: "papirus:apps/gnome-robots" },
   { app: "shittifyApp", name: "Evil Spotify", icon: "static/icons/shittify.webp" },
-  { app: "steamApp", name: "Yuki Steam", icon: "papirus:apps/steam" },
+  { app: "steamApp", name: "VERI Steam", icon: "papirus:apps/steam" },
   { app: "discordApp", name: "Discord", icon: "papirus:apps/discord" },
   { app: "geometryTodayApp", name: "Cloud Gaming (Geometry Today)", icon: "papirus:apps/preferences-desktop-gaming" },
   {

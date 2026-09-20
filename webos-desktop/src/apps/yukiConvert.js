@@ -28,7 +28,7 @@ export class YukiConvertApp extends BaseApp {
               <i class="fas fa-laptop"></i> From Device
             </button>
             <button id="yuki-convert-btn-yuki" class="yuki-convert-btn-secondary">
-              <i class="fas fa-folder-open"></i> Browse YukiOS
+              <i class="fas fa-folder-open"></i> Browse VERIOS
             </button>
           </div>
         </div>
@@ -45,14 +45,14 @@ export class YukiConvertApp extends BaseApp {
     const loadingView = win.querySelector("#yuki-convert-loading-view");
     const fileInput = win.querySelector("#yuki-convert-file-input");
     const btnLocal = win.querySelector("#yuki-convert-btn-local");
-    const btnYuki = win.querySelector("#yuki-convert-btn-yuki");
+    const btnVERI = win.querySelector("#yuki-convert-btn-yuki");
 
     btnLocal.addEventListener("click", (e) => {
       e.stopPropagation();
       fileInput.click();
     });
 
-    btnYuki.addEventListener("click", (e) => {
+    btnVERI.addEventListener("click", (e) => {
       e.stopPropagation();
       const closeBtn = win.querySelector(".close-btn");
       if (closeBtn) closeBtn.click();

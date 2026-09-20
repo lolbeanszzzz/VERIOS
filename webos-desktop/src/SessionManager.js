@@ -262,7 +262,7 @@ export class SessionManager {
           <div class="session-status-panel" id="session-status-panel">
             <div class="status-info-row">
               <span class="status-info-label">Version</span>
-              <span class="status-info-value">YukiOS ${YUKIOS_VERSION}</span>
+              <span class="status-info-value">VERI OS ${YUKIOS_VERSION}</span>
             </div>
             <div class="status-info-row">
               <span class="status-info-label">Build</span>

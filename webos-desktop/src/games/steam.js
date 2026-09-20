@@ -188,7 +188,7 @@ export function buildSteamShell(container, username, profilePic, hiddenGamesCoun
         <i class="fab fa-steam" style="font-size: 20px; margin-right: 8px;"></i>
         <div class="steam-menu-items">
           <div class="steam-dropdown">
-            <span class="steam-menu-item steam-dropdown-trigger" data-dropdown="steam-menu">Yuki</span>
+            <span class="steam-menu-item steam-dropdown-trigger" data-dropdown="steam-menu">VERI</span>
             <div class="steam-dropdown-menu" id="steam-menu-dropdown">
               <div class="steam-dropdown-item" data-action="steam-settings">Settings</div>
               <div class="steam-dropdown-item" data-action="steam-account">Account</div>
@@ -218,7 +218,7 @@ export function buildSteamShell(container, username, profilePic, hiddenGamesCoun
           <button type="button" class="steam-quick-nav-btn" data-steam-nav="login" title="Account"><i class="fas fa-gear"></i></button>
           <div class="steam-user-profile">
             <span class="steam-profile-name">${username}</span>
-            <span class="steam-profile-coins" title="YukiCoins"><i class="fas fa-coins"></i> <span class="steam-profile-coins-value"></span></span>
+            <span class="steam-profile-coins" title="VERICoins"><i class="fas fa-coins"></i> <span class="steam-profile-coins-value"></span></span>
             <span class="steam-profile-streak steam-profile-streak--hidden" title="Day streak"><i class="fas fa-fire"></i> <span class="steam-profile-streak-value"></span> days</span>
             <img src="${profilePic}" />
           </div>
@@ -361,7 +361,7 @@ export function initDropdowns(container, navigateTo, openFriendsWindow, wm) {
         { id: "up-friends", action: "up-friends", label: "Friends & Chat", icon: "fa-user-group" },
         { id: "up-settings", action: "up-settings", label: "Settings", icon: "fa-gear" },
         { id: "up-account", action: "up-account", label: "Account", icon: "fa-user-lock" },
-        { id: "up-social-tour", action: "up-social-tour", label: "Yuki Steam Tour", icon: "fa-question-circle" }
+        { id: "up-social-tour", action: "up-social-tour", label: "VERI Steam Tour", icon: "fa-question-circle" }
       ];
       const handlers = {
         "up-my-profile": () => navigateTo("user"),
