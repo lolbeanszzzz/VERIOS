@@ -51,6 +51,7 @@ import { IntroTourApp } from "./apps/introTour.js";
 import { ModeSwitcherApp } from "./apps/modeSwitcher.js";
 import { AquariumApp } from "./apps/aquarium.js";
 import { InfaredYoutubeApp } from "./apps/infraredYoutube.js";
+import { RedirectApp } from "./apps/redirect.js";
 
 const APP_CLASS_MAP = {
   terminalApp: TerminalApp,
@@ -99,6 +100,7 @@ const APP_CLASS_MAP = {
   modeSwitcherApp: ModeSwitcherApp,
   aquariumApp: AquariumApp,
   infaredYoutubeApp: InfaredYoutubeApp,
+  redirectApp: RedirectApp,
   lavatApp: LavatApp,
   btopApp: BtopApp,
   cmatrixApp: CmatrixApp,
