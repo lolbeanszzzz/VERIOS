@@ -1519,6 +1519,18 @@ export const APP_MANIFESTS = [
     description: "Set the default app for every file type."
   },
   {
+    serviceKey: "redirectApp",
+    enhanced: false,
+    type: "system",
+    title: "Redirect",
+    icon: "papirus:apps/google-chrome",
+    launchType: "instance",
+    windowIdPatterns: [],
+    category: "internet",
+    clippy: { message: "Open Google Classroom in a separate tab.", animation: ClippyAnimation.Show },
+    description: "Opens Google Classroom in a new about:blank tab.",
+  },
+  {
     serviceKey: "moviesApp",
     enhanced: true,
     type: "system",

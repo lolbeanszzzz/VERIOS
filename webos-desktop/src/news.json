@@ -1,5 +1,16 @@
 [
   {
+    "date": "September 21, 2026",
+    "label": "VERI OS Apps",
+    "sections": [
+      {
+        "icon": "fa-external-link-alt",
+        "title": "Redirect App",
+        "items": [["fa-external-link-alt", "Google Classroom", "Open Google Classroom in a separate about:blank tab."]]
+      }
+    ]
+  },
+  {
     "date": "September 19, 2026",
     "label": "VERI OS Media",
     "sections": [
