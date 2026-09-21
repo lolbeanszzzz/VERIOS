@@ -1276,7 +1276,7 @@ export const KEYBIND_DEFINITIONS = [
   {
     id: "mac.about",
     defaultKeys: ["Meta", ","],
-    desc: "Open About YukiOS",
+    desc: "Open About VERI OS",
     cat: "mac",
     icon: "papirus:actions/help-about",
     hidden: true
@@ -1364,7 +1364,7 @@ export const KEYBIND_DEFINITIONS = [
   {
     id: "mac.guide",
     defaultKeys: ["Meta", "Shift", "/"],
-    desc: "Open YukiOS Guide",
+    desc: "Open VERI OS Guide",
     cat: "mac",
     icon: "papirus:apps/accessories-dictionary",
     hidden: true

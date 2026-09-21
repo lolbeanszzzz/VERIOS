@@ -1102,9 +1102,9 @@ export class QuickAccessPanel {
 
   renderHelp(bodyEl) {
     const items = [
-      { icon: "fa-book-open", label: "YukiOS Guide", app: "yukiOsGuideApp" },
+      { icon: "fa-book-open", label: "VERI OS Guide", app: "yukiOsGuideApp" },
       { icon: "fa-keyboard", label: "Shortcuts", app: "shortcutsApp" },
-      { icon: "fa-info-circle", label: "About YukiOS", app: "aboutApp" }
+      { icon: "fa-info-circle", label: "About VERI OS", app: "aboutApp" }
     ];
     const infoRows = [
       { icon: "fa-tag", label: "Version", value: `VERI OS ${YUKIOS_VERSION}` },
