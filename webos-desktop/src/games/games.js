@@ -597,7 +597,7 @@ class GameWindowRenderer {
       return descriptionMap[appId];
     }
     const title = appMap[appId]?.title || appId;
-    return `Experience ${title} on YukiOS. This game is part of your Yuki Steam library.`;
+    return `Experience ${title} on VERI OS. This game is part of your Yuki Steam library.`;
   }
 
   setCurrentGame(appId) {

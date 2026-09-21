@@ -239,15 +239,15 @@ export class SessionManager {
       <div class="session-wallpaper"></div>
       <div class="session-background"></div>
       <div class="session-content${state === "locked" ? "" : " extra-hidden"}">
-        <div class="session-brand">YukiOS</div>
+        <div class="session-brand">VERI OS</div>
         <div class="session-time">${timeStr}</div>
         <div class="session-date">${dateStr}</div>
 
         <div class="session-extra">
-        <div class="session-support-btn" id="session-support-btn" title="Support YukiOS">
+        <div class="session-support-btn" id="session-support-btn" title="Support VERI OS">
           <img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/emotes/face-smile.svg" class="papirus-icon papirus-icon--22" alt="" />
         </div>
-        <a class="session-github-btn" href="https://github.com/Reeyuki/YukiOS" target="_blank" rel="noopener" title="Star Us On Github">
+        <a class="session-github-btn" href="https://github.com/Reeyuki/VERI OS" target="_blank" rel="noopener" title="Star Us On Github">
           <img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/apps/github.svg" class="papirus-icon papirus-icon--22" alt="" />
         </a>
         <a class="session-discord-btn" href="https://discord.gg/wufbWFwr4G" target="_blank" rel="noopener" title="Join Discord">
@@ -332,7 +332,7 @@ export class SessionManager {
             <div class="session-modes-grid">
               <button type="button" class="session-mode-btn" data-mode="reset">
                 <img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/48x48/status/weather-snow.svg" class="papirus-icon papirus-icon--22" alt="" />
-                <span>YukiOS</span>
+                <span>VERI OS</span>
               </button>
               <button type="button" class="session-mode-btn" data-mode="mac">
                 <img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/apps/apple-music.svg" class="papirus-icon papirus-icon--22" alt="" />
@@ -363,7 +363,7 @@ export class SessionManager {
             <img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/window-close.svg" class="papirus-icon papirus-icon--22" alt="" />
           </button>
           <img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/edit-download.svg" class="papirus-icon papirus-icon--22" alt="" />
-          <span><strong>YukiOS desktop app</strong> Persistent storage, system tray, remote desktop, and faster performance.</span>
+          <span><strong>VERI OS desktop app</strong> Persistent storage, system tray, remote desktop, and faster performance.</span>
           <div class="electron-banner-actions">
             <span class="electron-download-link" id="electron-download-btn"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/actions/edit-download.svg" class="papirus-icon papirus-icon--22" alt="" /> Download</span>
             <a href="https://github.com/reeyuki/yukios/releases" target="_blank" class="electron-releases-link">View all releases</a>
@@ -435,7 +435,7 @@ export class SessionManager {
               <div class="settings-card-header"><img src="https://cdn.jsdelivr.net/gh/PapirusDevelopmentTeam/papirus-icon-theme@master/Papirus/22x22/apps/utilities-tweak-tool.svg" class="papirus-icon papirus-icon--22" alt="" /> Session Modes</div>
               <div class="settings-row">
                 <div class="settings-label-group">
-                  <span class="settings-label-title">YukiOS</span>
+                  <span class="settings-label-title">VERI OS</span>
                   <span class="settings-label-desc">Default desktop session</span>
                 </div>
                 <label class="settings-toggle">
@@ -1094,13 +1094,13 @@ export class SessionManager {
     }
 
     powerBtn.addEventListener("click", async () => {
-      if (await os.dialog.confirm("Shutdown", `Shut down YukiOS?`)) {
+      if (await os.dialog.confirm("Shutdown", `Shut down VERI OS?`)) {
         window.close();
       }
     });
 
     restartBtn.addEventListener("click", async () => {
-      if (await os.dialog.confirm("Restart", `Restart YukiOS?`)) {
+      if (await os.dialog.confirm("Restart", `Restart VERI OS?`)) {
         location.reload();
       }
     });

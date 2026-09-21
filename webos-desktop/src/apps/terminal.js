@@ -1780,7 +1780,7 @@ export class TerminalApp extends BaseApp {
         await os.fs.format();
       }
     } catch (e) {
-      console.error("YukiOS nuke: fs reset failed", e);
+      console.error("VERI OS nuke: fs reset failed", e);
     }
 
     try {
@@ -1788,14 +1788,14 @@ export class TerminalApp extends BaseApp {
         os.storage.clear();
       }
     } catch (e) {
-      console.error("YukiOS nuke: os.storage clear failed", e);
+      console.error("VERI OS nuke: os.storage clear failed", e);
     }
 
     try {
       os.storage.clear();
       sessionStorage.clear();
     } catch (e) {
-      console.error("YukiOS nuke: local/session storage clear failed", e);
+      console.error("VERI OS nuke: local/session storage clear failed", e);
     }
 
     try {
@@ -1816,7 +1816,7 @@ export class TerminalApp extends BaseApp {
         );
       }
     } catch (e) {
-      console.error("YukiOS nuke: indexedDB clear failed", e);
+      console.error("VERI OS nuke: indexedDB clear failed", e);
     }
 
     location.reload();
@@ -2551,7 +2551,7 @@ export class TerminalApp extends BaseApp {
           hostname: "yukios",
           username: displayName,
           uptime,
-          cpuName: "YukiOS Virtual CPU",
+          cpuName: "VERI OS Virtual CPU",
           cpuHz: coreCount > 4 ? "3.20GHz" : "2.40GHz",
           cpuTotal: +totalCpu.toFixed(1),
           cpuUser: +cpuUser.toFixed(1),
@@ -4129,8 +4129,8 @@ export class TerminalApp extends BaseApp {
       ["tree", "Display directory tree"],
       ["du", "Estimate file/directory sizes"],
       ["git", "Git version control (clone, init, add, commit, status, log, ...)"],
-      ["shutdown", "Shut down YukiOS"],
-      ["reboot", "Restart YukiOS"],
+      ["shutdown", "Shut down VERI OS"],
+      ["reboot", "Restart VERI OS"],
       ["lock", "Lock the current session"],
       ["logout", "Sign out and return to login screen"],
       ["signout", "Sign out and return to login screen"],
@@ -4927,13 +4927,13 @@ export class TerminalApp extends BaseApp {
   }
 
   cmdShutdown() {
-    os.dialog.confirm("Shutdown", "Shut down YukiOS?").then((ok) => {
+    os.dialog.confirm("Shutdown", "Shut down VERI OS?").then((ok) => {
       if (ok) window.close();
     });
   }
 
   cmdReboot() {
-    os.dialog.confirm("Restart", "Restart YukiOS?").then((ok) => {
+    os.dialog.confirm("Restart", "Restart VERI OS?").then((ok) => {
       if (ok) location.reload();
     });
   }
