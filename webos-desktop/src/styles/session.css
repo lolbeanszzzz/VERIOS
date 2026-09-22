@@ -107,6 +107,30 @@
   box-shadow: 0 4px 12px var(--brand-glow);
 }
 
+.session-pin-label {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.session-pin-input {
+  width: 180px;
+  padding: 12px 16px;
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  background: var(--glass);
+  color: var(--text-primary);
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 0.28em;
+}
+
+.session-pin-error {
+  min-height: 18px;
+  margin: -8px 0 0;
+  color: var(--error);
+  font-size: 13px;
+}
+
 .login-center-panel {
   display: flex;
   flex-direction: column;
