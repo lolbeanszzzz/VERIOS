@@ -19,6 +19,7 @@ import { applyChromeOsSettings, disableChromeOsSettings } from "./modes/chromeos
 import { applySteamDeckSettings, disableSteamDeckSettings } from "./modes/steamdeck/session.js";
 import { getRecentNews } from "./apps/news.js";
 import { setDeckBootVideoSkip } from "./modes/steamdeck/deckBootVideo.js";
+import { verifyUnlockPin } from "./pinApi.js";
 
 export class SessionManager {
   constructor(os) {
@@ -296,6 +297,8 @@ export class SessionManager {
         <div class="user-carousel-row" id="user-carousel-row"></div>
 
         <div class="login-center-panel">
+          ${state === "locked" ? `<label class="session-pin-label" for="session-pin-input">Enter unlock PIN</label><input class="session-pin-input" id="session-pin-input" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]{6}" placeholder="6-digit PIN" aria-label="Six digit unlock PIN">` : ""}
+          <p class="session-pin-error" id="session-pin-error" role="alert"></p>
           <button class="action-button" id="action-button">
             ${this.getActionButtonText()}
           </button>
@@ -641,6 +644,18 @@ export class SessionManager {
 
   async signInAndExit() {
     if (this.sessionState === "locked") {
+      const pinInput = this.container?.querySelector("#session-pin-input");
+      const pinError = this.container?.querySelector("#session-pin-error");
+      const pin = pinInput?.value?.trim() || "";
+      if (!/^[0-9]{6}$/.test(pin)) {
+        if (pinError) pinError.textContent = "Enter a six digit PIN.";
+        return;
+      }
+      const valid = await verifyUnlockPin(pin);
+      if (!valid) {
+        if (pinError) pinError.textContent = "That PIN is invalid or expired.";
+        return;
+      }
       this.unlockSession();
       if (this.onSessionComplete) this.onSessionComplete(this.currentSession);
       return;
